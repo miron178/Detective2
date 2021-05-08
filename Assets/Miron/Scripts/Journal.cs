@@ -85,9 +85,24 @@ public class Journal : MonoBehaviour
         {
             codUI.interactable = false;
             codUI.GetComponentInParent<Image>().color = Color.green;
+
+            CheckVictory();
         }
     }
     
+    private bool CheckVictory()
+    {
+        foreach(Person person in characters)
+        {
+            if(person.guessCauseOfDeath != person.actualCauseOfDeath)
+            {
+                return false;
+            }
+        }
+        //TODO: add victory clause, open exit||change scene?
+        return true;
+    }
+
     private void Update()
     {
         float axis = Input.GetAxisRaw("Journal");
