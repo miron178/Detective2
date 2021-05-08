@@ -69,6 +69,8 @@ public class Journal : MonoBehaviour
                     codUI.value = codUI.options.Count - 1;
                 }
             }
+
+            codUI.onValueChanged.AddListener(delegate { CauseOfDeathSelected(person, codUI); });
         }
 
         //set content panel size
@@ -76,6 +78,16 @@ public class Journal : MonoBehaviour
         panelRectTransform.sizeDelta = new Vector2(width * 0.5f, -y);
     }
 
+    private void CauseOfDeathSelected(Person person, Dropdown codUI)
+    {
+        person.guessCauseOfDeath = (CauseOfDeath)codUI.value;
+        if (person.guessCauseOfDeath == person.actualCauseOfDeath)
+        {
+            codUI.interactable = false;
+            codUI.GetComponentInParent<Image>().color = Color.green;
+        }
+    }
+    
     private void Update()
     {
         float axis = Input.GetAxisRaw("Journal");
