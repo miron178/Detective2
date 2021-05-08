@@ -6,20 +6,16 @@ using UnityEngine.UI;
 
 public class Journal : MonoBehaviour
 {
-    enum CauseOfDeath
-    {
-        unknown,
-        one,
-        two
-    };
+    [SerializeField]
+    string[] causeOfDeath;
 
     [System.Serializable]
     class Person
     {
         public string name;
         [NonSerialized]
-        public CauseOfDeath guessCauseOfDeath = CauseOfDeath.unknown;
-        public CauseOfDeath actualCauseOfDeath;
+        public int guessCauseOfDeath  = -1;
+        public int actualCauseOfDeath = -1;
     };
 
     [SerializeField]
@@ -56,17 +52,17 @@ public class Journal : MonoBehaviour
             //set dropdown options
             Dropdown codUI = itemUI.GetComponentInChildren<Dropdown>();
             codUI.options.Clear();
-            foreach (CauseOfDeath cod in Enum.GetValues(typeof(CauseOfDeath)))
+            for(int i = 0; i < causeOfDeath.Length; i++)
             {
                 Dropdown.OptionData option = new Dropdown.OptionData
                 {
-                    text = cod.ToString()
+                    text = causeOfDeath[i]
                 };
                 codUI.options.Add(option);
-                if (cod == person.guessCauseOfDeath)
+                if (i == person.guessCauseOfDeath)
                 {
-                    //select this option - it's the last one (so far)
-                    codUI.value = codUI.options.Count - 1;
+                    //select this option
+                    codUI.value = i;
                 }
             }
 
@@ -80,7 +76,7 @@ public class Journal : MonoBehaviour
 
     private void CauseOfDeathSelected(Person person, Dropdown codUI)
     {
-        person.guessCauseOfDeath = (CauseOfDeath)codUI.value;
+        person.guessCauseOfDeath = codUI.value;
         if (person.guessCauseOfDeath == person.actualCauseOfDeath)
         {
             codUI.interactable = false;
@@ -100,6 +96,7 @@ public class Journal : MonoBehaviour
             }
         }
         //TODO: add victory clause, open exit||change scene?
+        Debug.Log("YOU WON");
         return true;
     }
 
@@ -124,25 +121,4 @@ public class Journal : MonoBehaviour
         menu.SetActive(show);
         GameManager.Instance.Pause(show);
     }
-
-    void OnGUI()
-    {
-        //Cursor.visible = true;
-    }
-
-#if false
-    private string CauseOfDeathToString(CauseOfDeath cod)
-    {
-        switch (cod)
-        {
-            case CauseOfDeath.one:
-                return "one";
-            case CauseOfDeath.two:
-                return "two";
-            default:
-                Debug.LogError("unknown cause of death");
-                return "???";
-        }
-    }
-#endif
 }

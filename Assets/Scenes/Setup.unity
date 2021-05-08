@@ -188,6 +188,21 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 1799566558}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Jake = 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[3]
+      value: Bob = 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4521388348607091613, guid: e45de52c8720e2a47a722f55213715ff,
         type: 3}
       propertyPath: m_Name
@@ -675,6 +690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215a517a6a7dcd34b98079e55385423d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  causeOfDeath:
+  - Unknown
+  - Old age
+  - Nuke
   characters:
   - name: Jake
     actualCauseOfDeath: 2
