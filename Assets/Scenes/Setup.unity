@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -121,6 +121,99 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &296094898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296094899}
+  - component: {fileID: 296094902}
+  - component: {fileID: 296094901}
+  - component: {fileID: 296094900}
+  m_Layer: 0
+  m_Name: echo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296094899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296094898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.81, y: -0.050000012, z: -4.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1018543892}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &296094900
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296094898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &296094901
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296094898}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 118cc28cb607f3a47b9da68bc7bac664, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &296094902
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296094898}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &540007773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,17 +283,64 @@ PrefabInstance:
       objectReference: {fileID: 1799566558}
     - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
         type: 3}
+      propertyPath: timeToWait
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
       propertyPath: messages.Array.size
-      value: 4
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[0]
+      value: 'Ghost 1: What do you mean your leaving?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[1]
+      value: 'Ghost 2: I already told you; it''s not safe here anymore.'
       objectReference: {fileID: 0}
     - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
         type: 3}
       propertyPath: messages.Array.data[2]
-      value: Jake = 2
+      value: 'Ghost 1: But the people here are violent like-'
       objectReference: {fileID: 0}
     - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
         type: 3}
       propertyPath: messages.Array.data[3]
+      value: 'Ghost 2: No Sam. The town is going to be destoyed by Mother Nature
+        itself.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[4]
+      value: 'Sam: What!? I don''t undersand. John, explain!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[5]
+      value: 'John: The nearby falut line is showing signs of activity.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[6]
+      value: 'John: And with that mountain so close, well I guess you know what will
+        happen.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[7]
+      value: 'Sam: ...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[8]
+      value: Bob = 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521388348607091603, guid: e45de52c8720e2a47a722f55213715ff,
+        type: 3}
+      propertyPath: messages.Array.data[9]
       value: Bob = 1
       objectReference: {fileID: 0}
     - target: {fileID: 4521388348607091613, guid: e45de52c8720e2a47a722f55213715ff,
@@ -452,6 +592,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+--- !u!4 &1018543892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4521388348607091601, guid: e45de52c8720e2a47a722f55213715ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 540007773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1062555561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6982203720843774594, guid: d4d38f2bb25db1c48b269fdfc7eadab0,
@@ -692,13 +838,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   causeOfDeath:
   - Unknown
-  - Old age
-  - Nuke
+  - Death in disaster
+  - Escaped
   characters:
-  - name: Jake
+  - name: Sam
+    actualCauseOfDeath: 0
+  - name: John
     actualCauseOfDeath: 2
-  - name: Bob
-    actualCauseOfDeath: 1
   menu: {fileID: 1062555561}
   characterListPanel: {fileID: 1114224781}
   characterListItemPrefab: {fileID: 1646047701904606688, guid: 346fe7bfdd4a50e4e8bf47a38b1b55a6,
