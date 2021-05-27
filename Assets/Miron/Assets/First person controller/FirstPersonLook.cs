@@ -9,16 +9,13 @@ public class FirstPersonLook : MonoBehaviour
     public float sensitivity = 1;
     public float smoothing = 2;
 
-
-    void Reset()
-    {
-        character = GetComponentInParent<FirstPersonMovement>().transform;
-    }
-
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        character = GetComponentInParent<FirstPersonMovement>().transform;
+        currentMouseLook.x = character.localEulerAngles.y;
     }
 
     void Update()
