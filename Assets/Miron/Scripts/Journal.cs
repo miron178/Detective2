@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Journal : MonoBehaviour
 {
@@ -95,8 +96,11 @@ public class Journal : MonoBehaviour
                 return false;
             }
         }
-        //TODO: add victory clause, open exit||change scene?
-        Debug.Log("YOU WON");
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
         return true;
     }
 
