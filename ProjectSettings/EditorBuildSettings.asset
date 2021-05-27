@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Miron/Scenes/Demo.unity
+    guid: cda6d2ff1c36bbf42b49e4960f8f7570
+  - enabled: 1
+    path: Assets/Miron/Scenes/VICTORY.unity
+    guid: 05589fcbe3f87744c8b5767251daf98b
   m_configObjects: {}
