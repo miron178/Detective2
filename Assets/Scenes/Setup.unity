@@ -1032,13 +1032,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399285290}
   m_LocalRotation: {x: -0.02757633, y: 0.32210693, z: 0.080719784, w: 0.9428527}
-  m_LocalPosition: {x: 19.41, y: 3.14, z: 16.67}
-  m_LocalScale: {x: 12.92, y: 6.39, z: 2.32}
+  m_LocalPosition: {x: 21.93, y: 7.03, z: 59.39}
+  m_LocalScale: {x: 12.920002, y: 6.3899994, z: 2.3200002}
   m_Children:
   - {fileID: 1669838656}
   - {fileID: 234769666}
-  m_Father: {fileID: 1400182501}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -5.9700003, y: 37.318, z: 7.7690005}
 --- !u!1001 &440736906
 PrefabInstance:
@@ -2068,7 +2068,7 @@ Transform:
   - {fileID: 1780828355}
   - {fileID: 943324045}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &943324044
 GameObject:
@@ -2428,6 +2428,82 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1185543369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1241978725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241978726}
+  - component: {fileID: 1241978728}
+  - component: {fileID: 1241978727}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1241978726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241978725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -307.6, y: -3.12, z: -300.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1884851337}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!154 &1241978727
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241978725}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: e42cb2eac744ef44d81b0f51078b25cd, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1241978728
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241978725}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: e42cb2eac744ef44d81b0f51078b25cd, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
 --- !u!1001 &1243424674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2717,10 +2793,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.52, y: 3.89, z: 42.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 399285294}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1400182502
 MonoBehaviour:
@@ -2739,8 +2814,8 @@ MonoBehaviour:
   messages:
   - The sign is too withered to read.
   - 'However, it should say:'
-  - '"Welcome to Gaiamoire. Population: 20"'
-  - Of course, only 10 of them are confirmed alive,
+  - '"Welcome to Gaiamoire. Population: 25"'
+  - Of course, only 15 of them are confirmed alive,
   - after the disaster struck.
   - What happened to the rest of them?
   timeToWait: 4
@@ -3615,8 +3690,9 @@ Transform:
   - {fileID: 138031077}
   - {fileID: 102441977}
   - {fileID: 1418490577}
+  - {fileID: 1241978726}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1946205222
 PrefabInstance:
@@ -3864,14 +3940,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   causeOfDeath:
+  - Not Selected
   - Unknown
   - Dead
   - Escaped
   characters:
   - name: Sam
-    actualCauseOfDeath: 0
+    actualCauseOfDeath: 1
   - name: John
-    actualCauseOfDeath: 2
+    actualCauseOfDeath: 3
+  - name: Luke
+    actualCauseOfDeath: 3
+  - name: Simon
+    actualCauseOfDeath: 3
+  - name: Markus
+    actualCauseOfDeath: 3
+  - name: Kisaka
+    actualCauseOfDeath: 3
+  - name: Naomi
+    actualCauseOfDeath: 3
+  - name: Jack
+    actualCauseOfDeath: 3
+  - name: Adam
+    actualCauseOfDeath: 3
+  - name: Silvia
+    actualCauseOfDeath: 3
   menu: {fileID: 1062555561}
   characterListPanel: {fileID: 1114224781}
   characterListItemPrefab: {fileID: 1646047701904606688, guid: 346fe7bfdd4a50e4e8bf47a38b1b55a6,
